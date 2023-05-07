@@ -15,7 +15,7 @@ To get started, clone the repository to your local machine and install the depen
 3. The application should now be running at http://localhost:8080
 
 ### Features:
-User authentication for loginn<br>
+User authentication for login<br>
 Select a job title to receive interview questions<br>
 Record and transcribe audio answers using the AssemblyAI API<br>
 Save and review previous recordings
