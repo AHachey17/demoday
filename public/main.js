@@ -1,4 +1,4 @@
-var thumbUp = document.getElementsByClassName("fa-thumbs-up");
+var thumbUp = document.getElementsByClassName("fa-play");
 var trash = document.getElementsByClassName("fa-trash");
 var thumbDown = document.getElementsByClassName("fa-thumbs-down");
 

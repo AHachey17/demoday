@@ -20,6 +20,50 @@ module.exports = function (app, passport, db) {
     })
   });
 
+  // startnew SECTION =========================
+  app.get('/startnew', isLoggedIn, function (req, res) {
+    db.collection('jobs').find().toArray((err, result) => {
+      if (err) return console.log(err)
+      res.render('startnew.ejs', {
+        user: req.user,
+        jobs: result
+      })
+    })
+  });
+
+  // history SECTION =========================
+  app.get('/history', isLoggedIn, function (req, res) {
+    db.collection('jobs').find().toArray((err, result) => {
+      if (err) return console.log(err)
+      res.render('history.ejs', {
+        user: req.user,
+        jobs: result
+      })
+    })
+  });
+
+    // account SECTION =========================
+    app.get('/account', isLoggedIn, function (req, res) {
+      db.collection('jobs').find().toArray((err, result) => {
+        if (err) return console.log(err)
+        res.render('account.ejs', {
+          user: req.user,
+          jobs: result
+        })
+      })
+    });
+
+     // post SECTION =========================
+     app.get('/post', isLoggedIn, function (req, res) {
+      db.collection('jobs').find().toArray((err, result) => {
+        if (err) return console.log(err)
+        res.render('post.ejs', {
+          user: req.user,
+          jobs: result
+        })
+      })
+    });
+
   // LOGOUT ==============================
   app.get('/logout', function (req, res) {
     req.logout(() => {
@@ -34,7 +78,7 @@ module.exports = function (app, passport, db) {
     db.collection('jobs').save({ questions: req.body.questions, job: req.body.job, thumbUp: 0, thumbDown: 0 }, (err, result) => {
       if (err) return console.log(err)
       console.log('saved to database')
-      res.redirect('/profile')
+      res.redirect('/startnew')
     })
   })
 

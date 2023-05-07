@@ -1,6 +1,49 @@
 body{
-  background: red;
+  background: black;
+  color: white;
 }
+
+.index-h3{
+  margin-top: 120px;
+}
+
+.index-img{
+  width: 40%;
+  float: right;
+  border-radius: 50%;
+}
+
+.btn{
+  margin-top: 40px;
+  background: rgb(0, 229, 255);
+}
+
+#profile-link{
+  margin: 30% 0 0 0;
+  color: yellow;
+  font-size: 2rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.profile-row{
+  width: 250px;
+  float: left;
+  background:rgb(0, 229, 255);
+  height: 250px;
+  border-radius: 50%;
+  text-align: center;
+  margin: 5% 15% 0% 12% ;
+}
+
+.startnew-col-sm-6{
+  text-align: center;
+}
+
+
+
+
 h3{
   margin-top: 40px;
 }
